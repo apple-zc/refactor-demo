@@ -56,8 +56,7 @@ public class Customer {
         frequentRenterPoints ++;
 
       // show figures for this rental
-      result += "\t" + each.getMovie().getTitle()
-                + "\t" + String.valueOf(thisAmount) + "\n";
+      result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
       totalAmount += thisAmount;
     }
 
