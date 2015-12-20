@@ -30,7 +30,7 @@ public class Customer {
     String result = "Rental Record for " + getName() + "\n";
     while (rentals.hasMoreElements()) { // 租借多个片子时
       Rental each = (Rental) rentals.nextElement();
-      frequentRenterPoints += getFrequentRenterPoints(each);
+      frequentRenterPoints += each.getFrequentRenterPoints();
 
       // show figures for this rental
       result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
@@ -41,10 +41,6 @@ public class Customer {
     result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
     result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
     return result;
-  }
-
-  private int getFrequentRenterPoints(Rental each) {
-    return each.getFrequentRenterPoints();
   }
 
 }
