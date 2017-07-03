@@ -10,9 +10,9 @@ import static org.junit.Assert.assertEquals;
 public class CustomerTest {
   private static String originalStatement =
       "Rental Record for James" + "\n"
-      + "\t" + "普通片" + "\t" + "5.0" + "\n"
-      + "\t" + "新片" + "\t" + "15.0" + "\n"
-      + "\t" + "儿童片" + "\t" + "6.0" + "\n"
+      + "\t" + "美女与野兽" + "\t" + "5.0" + "\n"
+      + "\t" + "摔跤吧!爸爸" + "\t" + "15.0" + "\n"
+      + "\t" + "狮子王" + "\t" + "6.0" + "\n"
       + "Amount owed is 26.0" + "\n"
       + "You earned 4 frequent renter points";
 
@@ -20,9 +20,9 @@ public class CustomerTest {
   public void testStatement() throws Exception {
     Customer customer = new Customer("James");
 
-    Movie regularMovie = new Movie("普通片", 0);
-    Movie newMovie = new Movie("新片", 1);
-    Movie childMovie = new Movie("儿童片", 2);
+    Movie regularMovie = new Movie("美女与野兽", 0);
+    Movie newMovie = new Movie("摔跤吧!爸爸", 1);
+    Movie childMovie = new Movie("狮子王", 2);
 
     Rental regularRental = new Rental(regularMovie, 4);
     Rental newRental = new Rental(newMovie, 5);
