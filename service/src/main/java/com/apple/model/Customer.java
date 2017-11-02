@@ -60,13 +60,8 @@ public class Customer {
     }
 
     private int getFrequentRenterPoints(Rental rental){
-        if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE) && rental.getDaysRented() > 1)
-            return 2;
-        else
-            return 1;
+        return rental.getFrequentRenterPoints();
     }
-
-
 
 
 }
